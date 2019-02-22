@@ -1,0 +1,37 @@
+public String blockJustify(){
+		String display = "";
+		//Adds spaces to the string until it reaches 80 characters
+		//goes through each line and breaks each line into words
+		//due to the difference in non-space characters to 80 will involve that many iterations
+		for(int i = 0; i < lines.size()-1;i++){
+			String line = lines.get(i);				//get the line to manipulate
+			String parts[] = line.split(" ");		//how many words are in the line
+			parts[parts.length-1].trim();			//get rid of \n at the end
+			//calculating how many spaces are needed
+			//(total needed) - (string length) + (spaces between each word)
+			int remaining = 80-(line.length()-1)+(parts.length-1);	
+		//	if(parts.length > 0){
+		//		
+		//	}
+				
+			/*int j = 0;								//index at j
+			//int iterations = limit/parts.length;	//spaces divided evenly among words
+	        while(remaining > 0){
+	        	int index = j%(parts.length-1);			//counter mod (words-1)
+	        	parts[index] = parts[index] + " ";	//adds spaces to the end of each word but the last
+	        	j++;
+	        	remaining--;
+	        }
+	        for(int k = 0; k < parts.length; k++){
+	        	display = display + parts[k];		//stores words with appropriate spaces into display
+	        }
+	        display = display + "\n";			//appends \n to the end of the line lines.size()-1 times
+	        System.out.println(display.length()%80);*/
+		}
+		//display = display + lines.get(lines.size()-1);	//appends last line
+        //System.out.println(display.length()%80);
+        
+        
+        
+		return display;
+	}
